@@ -63,7 +63,7 @@ export default function Profile() {
 
   return (
     <div className="min-h-screen bg-gray-900 text-white p-8">
-      <h1 className="text-3xl font-bold text-center mb-8">Your Spotify Profile</h1>
+      <h1 className="text-3xl font-bold text-center mb-8">Spotify Profile</h1>
 
       <div className="mb-8">
         <h2 className="text-2xl font-semibold mb-4">Top Track</h2>
@@ -72,7 +72,7 @@ export default function Profile() {
 
       <div className="mb-8">
         <h2 className="text-2xl font-semibold mb-4">Top Tracks</h2>
-        {/* Wrap the TopTracks component with a ref for capturing */}
+
         <div ref={tracksRef}>
           <TopTracks tracks={topTracks} />
         </div>
@@ -88,7 +88,6 @@ export default function Profile() {
         <TopGenres genres={topGenres} />
       </div>
 
-      {/* Button to download the list of most-streamed songs as an image */}
       <div className="flex justify-center mt-8">
         <button
           onClick={handleDownloadTracksImage}
